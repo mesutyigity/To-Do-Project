@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* !divin icindeki elemanlari ortalamak istiyorsan üstteki 3 lüyü kullanabilirsin */
+  padding-top: 50px;
+  background-color: #e1e3ea;
+  height: 100vh;
+  font-family: sans-serif;
+}
