@@ -10,7 +10,7 @@ btn.addEventListener("click", () => {
   e.preventDefault();
   const li = document.createElement("li");
   ul.prepend(li);
-  const i = document.createElement("i");
+  const i = document.createElement("s");
   li.appendChild(i);
   console.log(i);
   i.className = "fa-solid fa-trash-can -text-danger";
