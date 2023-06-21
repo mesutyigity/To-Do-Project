@@ -13,4 +13,20 @@
   background-color: #e1e3ea;
   height: 100vh;
   font-family: sans-serif;
+  background-image: linear-gradient(to top, #3c1388 0%, #30d093 100%);
+}
+button {
+  cursor: pointer;
+}
+h1 {
+  margin-bottom: 13px;
+  text-align: center;
+}
+button,
+#todo-input {
+  padding: 0.5rem;
+}
+
+#todo-input {
+  width: 500px;
 }
