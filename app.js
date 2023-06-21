@@ -1,26 +1,3 @@
-// // *selector
-
-// const input = document.getElementById("todo-input");
-// const btn = document.querySelector("#todo-btn");
-// const ul = document.querySelector("#todo-ul");
-
-// //*
-
-// btn.addEventListener("click", () => {
-//   e.preventDefault();
-//   const li = document.createElement("li");
-//   ul.prepend(li);
-//   const i = document.createElement("s");
-//   li.appendChild(i);
-//   console.log(i);
-//   i.className = "fa-solid fa-trash-can -text-danger";
-//   i.type = "button";
-//   console.log(li);
-
-//   li.textContent = input.value;
-//   input.value = "";
-// });
-
 // *selector
 
 const todoInput = document.querySelector("#todo-input");
@@ -30,6 +7,7 @@ const todosContainer = document.querySelector(".todos");
 //*
 
 const toggleComplete = (event) => {
+  event.preventDefault();
   const { parentElement } = event.currentTarget;
   const isCompleted = [...parentElement.classList].some(
     (className) => className === "completed"
@@ -42,10 +20,12 @@ const toggleComplete = (event) => {
 };
 
 const removeItem = (event) => {
+  event.preventDefault();
   todosContainer.removeChild(event.currentTarget.parentElement);
 };
 
 const renderTodoItem = (todoText) => {
+  event.preventDefault();
   const todoItemElement = document.createElement("li");
   todoItemElement.classList.add("todoItem");
 
@@ -58,7 +38,7 @@ const renderTodoItem = (todoText) => {
   const deleteButton = document.createElement("button");
   deleteButton.classList.add("deleteButton");
   deleteButton.innerText = "Delete";
-  deleteButton, addEventListener("click", removeItem);
+  deleteButton.addEventListener("click", removeItem);
   todoItemElement.appendChild(deleteButton);
 
   const textElement = document.createElement("p");
@@ -71,6 +51,7 @@ const renderTodoItem = (todoText) => {
   todoInput.focus();
 };
 const addTask = () => {
+  event.preventDefault();
   if (todoInput.value === "") {
     alert("Input bos olamaz");
   } else {
